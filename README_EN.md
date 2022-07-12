@@ -1,11 +1,6 @@
 
 | English | [简体中文](README.md) |
 
-<style>
-table {
-margin: auto;
-}
-</style>
 <p align="center">
     <img src="https://img.shields.io/badge/User--blue.svg?" alt="">
     <img src="https://img.shields.io/badge/Solved-0/2704-blue.svg?" alt="">
