@@ -1,15 +1,6 @@
 
 | English | [简体中文](README.md) |
 
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
 <p align="center">
     <img src="https://img.shields.io/badge/User--blue.svg?" alt="">
     <img src="https://img.shields.io/badge/Solved-0/2704-blue.svg?" alt="">
@@ -27,3 +18,14 @@
 |[2](https://leetcode-cn.com/problems/add-two-numbers)|[Add Two Numbers](https://github.com/KamToHung/leetcode-undo/tree/main/算法/2.%20两数相加/README_EN.md)|Medium|[Recursion](https://leetcode-cn.com/tag/recursion) [Linked List](https://leetcode-cn.com/tag/linked-list) [Math](https://leetcode-cn.com/tag/math) |
 
 </div>
+
+
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
