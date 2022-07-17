@@ -17,6 +17,7 @@
 | :----: | :---- | :----: | :----: |
 |[1](https://leetcode-cn.com/problems/two-sum)|[两数之和](https://github.com/KamToHung/leetcode/tree/main/算法/1.%20两数之和)|简单|[数组](https://leetcode-cn.com/tag/array) [哈希表](https://leetcode-cn.com/tag/hash-table) |
 |[2](https://leetcode-cn.com/problems/add-two-numbers)|[两数相加](https://github.com/KamToHung/leetcode/tree/main/算法/2.%20两数相加)|中等|[递归](https://leetcode-cn.com/tag/recursion) [链表](https://leetcode-cn.com/tag/linked-list) [数学](https://leetcode-cn.com/tag/math) |
+|[3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters)|[无重复字符的最长子串](https://github.com/KamToHung/leetcode-undo/tree/main/算法/3.%20无重复字符的最长子串)|中等|[哈希表](https://leetcode-cn.com/tag/hash-table) [字符串](https://leetcode-cn.com/tag/string) [滑动窗口](https://leetcode-cn.com/tag/sliding-window) |
 |[5](https://leetcode-cn.com/problems/longest-palindromic-substring)|[最长回文子串](https://github.com/KamToHung/leetcode-undo/tree/main/算法/5.%20最长回文子串)|中等|[字符串](https://leetcode-cn.com/tag/string) [动态规划](https://leetcode-cn.com/tag/dynamic-programming) |
 |[9](https://leetcode-cn.com/problems/palindrome-number)|[回文数](https://github.com/KamToHung/leetcode-undo/tree/main/算法/9.%20回文数)|简单|[数学](https://leetcode-cn.com/tag/math) |
 |[14](https://leetcode-cn.com/problems/longest-common-prefix)|[最长公共前缀](https://github.com/KamToHung/leetcode-undo/tree/main/算法/14.%20最长公共前缀)|简单|[字符串](https://leetcode-cn.com/tag/string) |
