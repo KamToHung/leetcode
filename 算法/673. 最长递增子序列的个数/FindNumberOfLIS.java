@@ -1,6 +1,6 @@
 public class FindNumberOfLIS {
 
-    static class Solution {
+    class Solution {
 
         public int findNumberOfLIS(int[] nums) {
             int[] dp = new int[nums.length];
