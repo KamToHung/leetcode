@@ -43,3 +43,5 @@
 |[746](https://leetcode-cn.com/problems/min-cost-climbing-stairs)|[使用最小花费爬楼梯](https://github.com/KamToHung/leetcode/tree/main/算法/746.%20使用最小花费爬楼梯)|简单|[数组](https://leetcode-cn.com/tag/array) [动态规划](https://leetcode-cn.com/tag/dynamic-programming) |
 |[1137](https://leetcode-cn.com/problems/n-th-tribonacci-number)|[第 N 个泰波那契数](https://github.com/KamToHung/leetcode/tree/main/算法/1137.%20第%20N%20个泰波那契数)|简单|[记忆化搜索](https://leetcode-cn.com/tag/memoization) [数学](https://leetcode-cn.com/tag/math) [动态规划](https://leetcode-cn.com/tag/dynamic-programming) |
 |[1486](https://leetcode-cn.com/problems/xor-operation-in-an-array)|[数组异或操作](https://github.com/KamToHung/leetcode/tree/main/算法/1486.%20数组异或操作)|简单|[位运算](https://leetcode-cn.com/tag/bit-manipulation) [数学](https://leetcode-cn.com/tag/math) |
+
+
