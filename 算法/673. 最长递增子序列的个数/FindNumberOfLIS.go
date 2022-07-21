@@ -1,5 +1,4 @@
-//package
-package main
+package _73__最长递增子序列的个数
 
 func findNumberOfLIS(nums []int) int {
 	//  状态转移方程式：f(x) = v(x) + 1
@@ -37,9 +36,4 @@ func findNumberOfLIS(nums []int) int {
 		}
 	}
 	return count
-}
-
-func main() {
-	nums := []int{1, 3, 5, 4, 7}
-	findNumberOfLIS(nums)
 }
