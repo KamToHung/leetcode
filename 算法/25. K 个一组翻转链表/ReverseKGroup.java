@@ -103,6 +103,29 @@ public class ReverseKGroup {
             return listNode;
         }
 
+        ListNode tailNode = null;
+
+        ListNode reverseN(ListNode head, int n) {
+            if (n == 1) {
+                tailNode = head.next;
+                return head;
+            }
+            ListNode node = reverseN(head.next, n - 1);
+            head.next.next = head;
+            head.next = tailNode;
+            return node;
+        }
+
+        ListNode reverseBetween(ListNode head, int m, int n) {
+            if (m == 1) {
+                return reverseN(head, n);
+            }
+            ListNode node = reverseBetween(head, m - 1, n - 1);
+            // next其实就是从m开始后的链表
+            head.next = node;
+            return head;
+        }
+
 
     }
 

@@ -22,6 +22,29 @@ public class ReverseBetween {
     class Solution {
 
         public ListNode reverseBetween(ListNode head, int left, int right) {
+            if (left == 1) {
+                return reverseN(head, right);
+            }
+            ListNode node = reverseBetween(head.next, left - 1, right - 1);
+            head.next = node;
+            return head;
+        }
+
+        ListNode tail = null;
+
+        public ListNode reverseN(ListNode head, int n) {
+            if (n == 1) {
+                tail = head.next;
+                return head;
+            }
+            ListNode node = reverseN(head.next, n - 1);
+            head.next.next = head;
+            head.next = tail;
+            return node;
+        }
+
+
+        public ListNode reverseBetween1(ListNode head, int left, int right) {
             if (head == null || head.next == null) {
                 return head;
             }
