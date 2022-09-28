@@ -2,7 +2,7 @@
 public class LongestPalindrome {
 
     class Solution {
-        public String longestPalindrome(String s) {
+        public String longestPalindrome1(String s) {
             if (s == null) {
                 return null;
             }
@@ -41,6 +41,62 @@ public class LongestPalindrome {
             }
             return s.substring(start, start + length);
         }
+
+        // 暴力
+        public String longestPalindrome2(String s) {
+            int maxLen = 0;
+            String result = "";
+            for (int j = 1; j <= s.length(); j++) {
+                for (int i = 0; i < j; i++) {
+                    String cur = s.substring(i, j);
+                    if (isPalindrome(cur) && cur.length() > maxLen) {
+                        result = cur;
+                        maxLen = cur.length();
+                    }
+                }
+            }
+            return result;
+        }
+
+
+        public boolean isPalindrome(String s) {
+            int left = 0;
+            int right = s.length() - 1;
+            while (left < right) {
+                char leftChar = s.charAt(left);
+                char rightChar = s.charAt(right);
+                if (leftChar != rightChar) {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
+        }
+
+        // 中心扩展
+        public String longestPalindrome(String s) {
+            String result = "";
+            for (int i = 0; i < s.length(); i++) {
+                String oneEvent = maxPalindrome(s, i, i);
+                String twoEvent = maxPalindrome(s, i, i + 1);
+                String theMax = oneEvent.length() > twoEvent.length() ? oneEvent : twoEvent;
+                if (result.length() < theMax.length()) {
+                    result = theMax;
+                }
+            }
+            return result;
+        }
+
+        public String maxPalindrome(String s, int left, int right) {
+            while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+                left--;
+                right++;
+            }
+            return s.substring(left + 1, right);
+        }
+
+
     }
 
 }
