@@ -50,7 +50,7 @@ public class ReverseKGroup {
             }
             return pre;
         }
-
+ne
 
         public ListNode reverseKGroup1(ListNode head, int k) {
             if (head == null) {
