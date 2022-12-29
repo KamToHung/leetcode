@@ -1,14 +1,54 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TwoOutOfThree {
 
     class Solution {
 
         public List<Integer> twoOutOfThree(int[] nums1, int[] nums2, int[] nums3) {
+            // 可以用map来做处理
+            List<Integer> result = new ArrayList<>();
+            Map<Integer, Integer> memo = new HashMap<>();
+            // 先存放，存在则value=1
+            for (int i : nums1) {
+                memo.put(i, 1);
+            }
+            // 如果memo存在并且为1则加入到结果集,如果不存在则设置为2
+            for (int i : nums2) {
+                // 为2则已经在本次循环加入，不作处理
+                if (memo.get(i) != null && memo.get(i) == 2) {
+                    continue;
+                }
+                // 这里是1中存在的，判断是否存在，存在则加入到结果集
+                if (memo.containsKey(i) && !result.contains(i)) {
+                    result.add(i);
+                } else {
+                    // 设置为2避免与1重复
+                    memo.put(i, 2);
+                }
+            }
+            // nums3做同样的处理
+            for (int i : nums3) {
+                if (memo.get(i) != null && memo.get(i) == 3) {
+                    continue;
+                }
+                if (memo.containsKey(i) && !result.contains(i)) {
+                    result.add(i);
+                } else {
+                    memo.put(i, 3);
+                }
+            }
+            return result;
+        }
+
+        public List<Integer> twoOutOfThree1(int[] nums1, int[] nums2, int[] nums3) {
             List<Integer> result = new ArrayList<>();
             int[] memo = new int[101];
-            for (int x : nums1) memo[x] = 1;
+            for (int x : nums1) {
+                memo[x] = 1;
+            }
             for (int x : nums2) {
                 if (memo[x] == 1) {
                     memo[x] = -1;
