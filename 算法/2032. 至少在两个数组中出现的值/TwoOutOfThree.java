@@ -1,7 +1,7 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TwoOutOfThree {
 
@@ -69,6 +69,19 @@ public class TwoOutOfThree {
             }
             return result;
         }
+
+        public List<Integer> twoOutOfThree2(int[] nums1, int[] nums2, int[] nums3) {
+            // lambda一气呵成
+            return Stream.of(nums1, nums2, nums3)
+                    .flatMap(o -> Arrays.stream(o).distinct().boxed())
+                    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                    .entrySet()
+                    .stream()
+                    .filter(o -> o.getValue() >= 2)
+                    .map(Map.Entry::getKey)
+                    .collect(Collectors.toList());
+        }
+
     }
 
 }
