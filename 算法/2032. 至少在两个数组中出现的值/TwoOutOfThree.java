@@ -45,10 +45,13 @@ public class TwoOutOfThree {
 
         public List<Integer> twoOutOfThree1(int[] nums1, int[] nums2, int[] nums3) {
             List<Integer> result = new ArrayList<>();
+            // 题目中给出最大值为100，则构建容量100的数组桶
             int[] memo = new int[101];
+            // nums1中存在的数据设置为1
             for (int x : nums1) {
                 memo[x] = 1;
             }
+            // nums2中存在与nums1相同的数据则加入结果集，并且设置为-1，防止重复加入结果集
             for (int x : nums2) {
                 if (memo[x] == 1) {
                     memo[x] = -1;
@@ -57,6 +60,7 @@ public class TwoOutOfThree {
                     memo[x] = 2;
                 }
             }
+            // nums3中存在与nums1/nums2相同的数据则加入结果集，并且设置为-1，防止重复加入结果集
             for (int x : nums3) {
                 if (memo[x] == 1 || memo[x] == 2) {
                     memo[x] = -1;
