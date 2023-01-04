@@ -16,6 +16,7 @@ public class MaxValue {
                 max++;
                 // 如果在左右边界则终止，此时结果为sum+剩余大小/n
                 if (left == 0 && right == n - 1) {
+                    // 如果这时候还有剩余，n个位置一起分吧
                     return max - 1 + (maxSum - sum) / n;
                 }
                 sum += right - left + 1;
