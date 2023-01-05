@@ -1,10 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author kamtohung
- * @since 2022/10/5
- */
+
 public class FindRepeatNumber {
 
     class Solution {

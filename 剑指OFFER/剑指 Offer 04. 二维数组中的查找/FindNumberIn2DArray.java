@@ -1,7 +1,4 @@
-/**
- * @author kamtohung
- * @since 2022/10/5
- */
+
 public class FindNumberIn2DArray {
 
     class Solution {
