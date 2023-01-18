@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SortList {
 
@@ -22,6 +24,32 @@ public class SortList {
 
 
     class Solution {
+
+        public ListNode sortList1(ListNode head) {
+            // 临时集合
+            List<ListNode> memo = new ArrayList<>();
+            ListNode tmp = head;
+            while (tmp != null) {
+                memo.add(tmp);
+                tmp = tmp.next;
+            }
+            // 排序
+            List<ListNode> sortedList = memo.stream()
+                    .sorted((o1, o2) -> o1.val - o2.val)
+                    .collect(Collectors.toList());
+            // 重组链表
+            ListNode newHead = new ListNode();
+            ListNode newTmp = newHead;
+            for (int i = 0, sortedListSize = sortedList.size(); i < sortedListSize; i++) {
+                ListNode listNode = sortedList.get(i);
+                if (i == sortedListSize - 1) {
+                    listNode.next = null;
+                }
+                newTmp.next = listNode;
+                newTmp = newTmp.next;
+            }
+            return newHead.next;
+        }
 
         public ListNode sortList(ListNode head) {
             if (head == null || head.next == null) {
