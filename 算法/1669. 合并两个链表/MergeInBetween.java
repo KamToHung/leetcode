@@ -1,6 +1,4 @@
-/**
- * @author <a href = "hongjintao@52tt.com">hongjintao</a>
- */
+
 public class MergeInBetween {
 
 
