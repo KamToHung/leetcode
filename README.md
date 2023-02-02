@@ -62,7 +62,26 @@
 |[78](https://leetcode-cn.com/problems/subsets)|[子集](https://github.com/KamToHung/leetcode/tree/main/算法/78.%20子集)|中等|[位运算](https://leetcode-cn.com/tag/bit-manipulation) [数组](https://leetcode-cn.com/tag/array) [回溯](https://leetcode-cn.com/tag/backtracking) |
 |[86](https://leetcode-cn.com/problems/partition-list)|[分隔链表](https://github.com/KamToHung/leetcode/tree/main/算法/86.%20分隔链表)|中等|[链表](https://leetcode-cn.com/tag/linked-list) [双指针](https://leetcode-cn.com/tag/two-pointers) |
 |[90](https://leetcode-cn.com/problems/subsets-ii)|[子集 II](https://github.com/KamToHung/leetcode/tree/main/算法/90.%20子集%20II)|中等|[位运算](https://leetcode-cn.com/tag/bit-manipulation) [数组](https://leetcode-cn.com/tag/array) [回溯](https://leetcode-cn.com/tag/backtracking) |
-|[92](https://leetcode-cn.com/problems/reverse-linked-list-ii)|[反转链表 II](https://github.com/KamToHung/leetcode/tree/main/算法/92.%20反转链表%20II)|中等|[链表](https://leetcode-cn.com/tag/linked-list) |
+|[92](https://le/**
+* Definition for a binary tree node.
+* public class TreeNode {
+*     int val;
+*     TreeNode left;
+*     TreeNode right;
+*     TreeNode() {}
+*     TreeNode(int val) { this.val = val; }
+*     TreeNode(int val, TreeNode left, TreeNode right) {
+*         this.val = val;
+*         this.left = left;
+*         this.right = right;
+*     }
+* }
+  */
+  class Solution {
+  public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
+
+  }
+  }etcode-cn.com/problems/reverse-linked-list-ii)|[反转链表 II](https://github.com/KamToHung/leetcode/tree/main/算法/92.%20反转链表%20II)|中等|[链表](https://leetcode-cn.com/tag/linked-list) |
 |[94](https://leetcode-cn.com/problems/binary-tree-inorder-traversal)|[二叉树的中序遍历](https://github.com/KamToHung/leetcode/tree/main/算法/94.%20二叉树的中序遍历)|简单|[栈](https://leetcode-cn.com/tag/stack) [树](https://leetcode-cn.com/tag/tree) [深度优先搜索](https://leetcode-cn.com/tag/depth-first-search) [二叉树](https://leetcode-cn.com/tag/binary-tree) |
 |[95](https://leetcode-cn.com/problems/unique-binary-search-trees-ii)|[不同的二叉搜索树 II](https://github.com/KamToHung/leetcode/tree/main/算法/95.%20不同的二叉搜索树%20II)|中等|[树](https://leetcode-cn.com/tag/tree) [二叉搜索树](https://leetcode-cn.com/tag/binary-search-tree) [动态规划](https://leetcode-cn.com/tag/dynamic-programming) [回溯](https://leetcode-cn.com/tag/backtracking) [二叉树](https://leetcode-cn.com/tag/binary-tree) |
 |[96](https://leetcode-cn.com/problems/unique-binary-search-trees)|[不同的二叉搜索树](https://github.com/KamToHung/leetcode/tree/main/算法/96.%20不同的二叉搜索树)|中等|[树](https://leetcode-cn.com/tag/tree) [二叉搜索树](https://leetcode-cn.com/tag/binary-search-tree) [数学](https://leetcode-cn.com/tag/math) [动态规划](https://leetcode-cn.com/tag/dynamic-programming) [二叉树](https://leetcode-cn.com/tag/binary-tree) |
