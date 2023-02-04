@@ -22,4 +22,11 @@ public class GetMaximumConsecutive {
 
     }
 
+    public static void main(String[] args) {
+        GetMaximumConsecutive getMaximumConsecutive = new GetMaximumConsecutive();
+        Solution solution = getMaximumConsecutive.new Solution();
+        int[] coins = {0, 1, 2};
+        System.out.println(solution.getMaximumConsecutive(coins));
+    }
+
 }
