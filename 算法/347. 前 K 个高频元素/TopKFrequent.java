@@ -6,6 +6,7 @@ public class TopKFrequent {
 
     class Solution {
 
+        // 经典top key问题
         public int[] topKFrequent(int[] nums, int k) {
             if (nums == null || nums.length == 0 || k <= 0) {
                 return new int[0];

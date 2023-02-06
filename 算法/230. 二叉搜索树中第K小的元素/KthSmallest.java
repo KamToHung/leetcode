@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class KthSmallest {
 
@@ -25,49 +24,45 @@ public class KthSmallest {
 
     class Solution {
 
-        private List<Integer> result = new ArrayList<>();
-
         public int kthSmallest(TreeNode root, int k) {
-            if (root == null) {
-                return 0;
+            LinkedList<TreeNode> queue = new LinkedList<>();
+            while(root != null || !queue.isEmpty()) {
+                while (root != null) {
+                    queue.addLast(root);
+                    root = root.left;
+                }
+                root = queue.removeLast();
+                k--;
+                if (k == 0) {
+                    return root.val;
+                }
+                root = root.right;
             }
-            order(root);
-            return result.get(k - 1);
+            return 0;
         }
 
-        // 中序遍历可以从小到大排序
-        public void order(TreeNode node) {
-            if (node == null) {
-                return;
-            }
-            order(node.left);
-            result.add(node.val);
-            order(node.right);
+
+        int k = 0;
+
+        int result = 0;
+
+        public int kthSmallest1(TreeNode root, int k) {
+            this.k = k;
+            dfs(root);
+            return result;
         }
 
-        int number;
-
-        int n = 0;
-
-        public int kthSmallest2(TreeNode root, int k) {
-            if (root == null) {
-                return 0;
-            }
-            order2(root, k);
-            return number;
-        }
-
-        // 进阶：如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化算法？
-        public void order2(TreeNode node, int k) {
-            if (node == null) {
+        private void dfs(TreeNode root) {
+            if (root == null || k <= 0) {
                 return;
             }
-            order2(node.left, k);
-            if (++n == k) {
-                number = node.val;
-                return;
+            dfs(root.left);
+            // 得到结果
+            k--;
+            if (k == 0) {
+                result = root.val;
             }
-            order2(node.right, k);
+            dfs(root.right);
         }
 
     }
