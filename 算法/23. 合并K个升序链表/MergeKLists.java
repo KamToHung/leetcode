@@ -1,3 +1,4 @@
+import java.util.PriorityQueue;
 
 public class MergeKLists {
 
@@ -55,6 +56,37 @@ public class MergeKLists {
             }
             return node.next;
         }
+
+
+        // 优先队列
+        public ListNode mergeKLists1(ListNode[] lists) {
+            if (lists == null || lists.length == 0) {
+                return null;
+            }
+            // 虚拟头结点
+            ListNode result = new ListNode();
+            ListNode node = result;
+            // 优先队列
+            PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
+            // 先把结点加入优先队列
+            for (ListNode cur : lists) {
+                if (cur != null) {
+                    queue.add(cur);
+                }
+            }
+            while (!queue.isEmpty()) {
+                // 获取最小结点，放入结果集中
+                ListNode cur = queue.poll();
+                node.next = cur;
+                if (cur.next != null) {
+                    queue.offer(cur.next);
+                }
+                node = node.next;
+            }
+            return result.next;
+        }
+
+
     }
 
 }
