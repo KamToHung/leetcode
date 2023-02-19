@@ -21,23 +21,24 @@ public class Partition {
     class Solution {
 
         public ListNode partition(ListNode head, int x) {
-            ListNode left = new ListNode(-1);
-            ListNode right = new ListNode(-1);
-            ListNode leftNode = left;
-            ListNode rightNode = right;
-            while (head != null) {
-                if (head.val < x) {
-                    leftNode.next = head;
-                    leftNode = leftNode.next;
+            ListNode small = new ListNode(-1);
+            ListNode big = new ListNode(-1);
+            ListNode smallHead = small;
+            ListNode bigHead = big;
+            ListNode node = head;
+            while (node != null) {
+                if (node.val < x) {
+                    small.next = node;
+                    small = small.next;
                 } else {
-                    rightNode.next = head;
-                    rightNode = rightNode.next;
+                    big.next = node;
+                    big = big.next;
                 }
-                head = head.next;
+                node = node.next;
             }
-            rightNode.next = null;
-            leftNode.next = right.next;
-            return left.next;
+            big.next = null;
+            small.next = bigHead.next;
+            return smallHead.next;
         }
 
     }
