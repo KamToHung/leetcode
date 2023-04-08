@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/已解决-0/2704-blue.svg?" alt="">
     <img src="https://img.shields.io/badge/简单-0-green.svg?" alt="">
     <img src="https://img.shields.io/badge/中等-0-orange.svg?" alt="">
-    <img src="https://img.shields.io/badge/困难-0-red.svg?" alt=""> 
+    <img src="https://img.shields.io/badge/困难-0-red.svg?" alt="">  
 </p>
 <!-- align="center" -->
 <h1>My LeetCode Solutions</h1>
