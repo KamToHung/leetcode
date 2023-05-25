@@ -1,9 +1,35 @@
+import java.util.Stack;
 
 public class LongestValidParentheses {
 
-    class Solution {
+    static class Solution {
 
         public int longestValidParentheses(String s) {
+            int max = 0;
+            Stack<Integer> stack = new Stack<>();
+            stack.push(-1);
+            for (int i = 0; i < s.length(); i++) {
+                char curValue = s.charAt(i);
+                if (curValue == '(') {
+                    stack.push(i);
+                } else {
+                    stack.pop();
+                    if (stack.isEmpty()) {
+                        stack.push(i);
+                    } else {
+                        max = Math.max(max, i - stack.peek());
+                    }
+                }
+            }
+            return max;
+        }
+
+        public static void main(String[] args) {
+            Solution solution = new Solution();
+            System.out.println(solution.longestValidParentheses("()(())))())()"));
+        }
+
+        public int longestValidParentheses1(String s) {
             int left = 0;
             int right = 0;
             int max = 0;
