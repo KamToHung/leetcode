@@ -25,29 +25,25 @@ public class NextGreaterElement {
         }
 
         public int[] nextGreaterElement1(int[] nums1, int[] nums2) {
-            int m = nums1.length;
-            int n = nums2.length;
-            int[] result = new int[m];
-            // 遍历nums1
-            for (int i = 0; i < m; i++) {
-                int value = nums1[i];
-                // 遍历nums2
-                // 首先找到相等的数的位置，然后从这个位置开始遍历，如果找到比这个数大的数，就是结果
-                for (int j = 0; j < n; j++) {
-                    if (nums2[j] == value) {
-                        for (int k = j; k < n; k++) {
-                            // 如果找到比这个数大的数，就是结果
-                            if (nums2[k] > value) {
-                                result[i] = nums2[k];
-                                break;
-                            }
-                            // 如果是最后一个元素又不符合条件，则设置为-1
-                            if (k == n - 1) {
-                                result[i] = -1;
-                            }
+            Map<Integer, Integer> memo = new HashMap<>();
+            for (int i = 0; i < nums2.length; i++) {
+                memo.put(nums2[i], i);
+            }
+            int[] result = new int[nums1.length];
+            for (int i = 0; i < nums1.length; i++) {
+                int value = -1;
+                if (memo.containsKey(nums1[i])) {
+                    // 循环的元素在nums2里的index
+                    int index = memo.get(nums1[i]);
+                    for (int j = index + 1; j < nums2.length; j++) {
+                        // 下一个更大的元素
+                        if (nums2[j] > nums1[i]) {
+                            value = nums2[j];
+                            break;
                         }
                     }
                 }
+                result[i] = value;
             }
             return result;
         }
